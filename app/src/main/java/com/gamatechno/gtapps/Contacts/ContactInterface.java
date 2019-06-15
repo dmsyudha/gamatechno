@@ -1,21 +1,16 @@
 package com.gamatechno.gtapps.Contacts;
 
+import com.gamatechno.gtapps.ContactModel;
+import com.gamatechno.gtapps.UserModel;
+
 public interface ContactInterface {
 
     interface  View {
-        void showButtonClick(boolean b);
-        void setButtonColor(int color);
-        void navigateNextScreen();
-        void showError(String error);
-        void showTickVisibility(int value);
-
+        void isContactOnline(boolean b);
+        void isMessageNotif(boolean b);
     }
 
     interface Presenter {
-        void loadNextScreen();
-        void defaultSettings();
-        void verifyEntries();
-        void savePassword(String password);
-        String appendIndvidualPassword(String first, String second, String third, String fourth);
+        void onSelectContact(ContactModel contact);
     }
 }

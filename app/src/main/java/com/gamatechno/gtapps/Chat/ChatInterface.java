@@ -3,19 +3,15 @@ package com.gamatechno.gtapps.Chat;
 public interface ChatInterface {
 
     interface  View {
-        void showButtonClick(boolean b);
-        void setButtonColor(int color);
-        void navigateNextScreen();
-        void showError(String error);
-        void showTickVisibility(int value);
-
+        void isMessageSent(boolean b);
+        void onReceiveMessage(boolean b);
+        void noInternetConnection(boolean b);
     }
 
     interface Presenter {
-        void loadNextScreen();
-        void defaultSettings();
-        void verifyEntries();
-        void savePassword(String password);
-        String appendIndvidualPassword(String first, String second, String third, String fourth);
+        void getAllMessages();
+        void sendMessage();
+        void onMessageFailed();
+        void receiveMessage();
     }
 }

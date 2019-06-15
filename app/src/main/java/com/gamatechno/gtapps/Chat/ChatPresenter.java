@@ -3,7 +3,7 @@ package com.gamatechno.gtapps.Chat;
 import com.gamatechno.gtapps.Login.LoginInterface;
 import com.gamatechno.gtapps.ContactModel;
 
-public class ChatPresenter implements LoginInterface.Presenter {
+public class ChatPresenter implements ChatInterface.Presenter {
     private LoginInterface.View view;
     private ContactModel model;
 
@@ -14,28 +14,22 @@ public class ChatPresenter implements LoginInterface.Presenter {
     }
 
     @Override
-    public void loadNextScreen() {
-        view.navigateNextScreen();
-    }
-
-    @Override
-    public void defaultSettings() {
-    }
-
-    @Override
-    public void verifyEntries() {
+    public void getAllMessages() {
 
     }
 
-
     @Override
-    public void savePassword(String password) {
+    public void sendMessage() {
+
     }
 
     @Override
-    public String appendIndvidualPassword(String first, String second, String third, String fourth) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(first).append(second).append(third).append(fourth);
-        return sb.toString();
+    public void onMessageFailed() {
+
+    }
+
+    @Override
+    public void receiveMessage() {
+
     }
 }
